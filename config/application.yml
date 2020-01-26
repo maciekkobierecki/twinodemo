@@ -1,0 +1,23 @@
+spring:
+  mvc.locale: pl_PL
+  datasource:
+    url: jdbc:postgresql://localhost:5432/twinodemo
+    username: twinodemo
+    password: twinodemo
+  liquibase:
+    change-log: classpath:/db.changelog/master.xml
+  flyway:
+    enabled: false
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  level:
+    root: TRACE
+
+
