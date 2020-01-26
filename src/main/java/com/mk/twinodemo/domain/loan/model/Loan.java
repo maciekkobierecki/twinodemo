@@ -1,5 +1,6 @@
 package com.mk.twinodemo.domain.loan.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.CascadeType;
@@ -29,4 +30,13 @@ public class Loan {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "loan_id")
     private List<LoanProlong> prolongs;
+
+    public void prolong(LoanProlong prolong) {
+        prolongs.add(prolong);
+    }
+
+    @JsonIgnore
+    public Integer getProlongsCount() {
+        return prolongs.size();
+    }
 }

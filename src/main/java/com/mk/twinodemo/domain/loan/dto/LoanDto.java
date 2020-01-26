@@ -7,6 +7,7 @@ import java.time.OffsetDateTime;
 
 @Data
 public class LoanDto {
+    private Long id;
     private OffsetDateTime loanDate;
     private BigDecimal amount;
 }

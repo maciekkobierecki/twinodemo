@@ -16,5 +16,5 @@ public class LoanProlong {
     private Long id;
     private int prolongPeriod;
     private OffsetDateTime oldLoanEndDate;
-    private OffsetDateTime currentLoanEndDate;
+    private OffsetDateTime newLoanEndDate;
 }

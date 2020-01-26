@@ -1,15 +1,15 @@
 package com.mk.twinodemo.domain.loan.dto;
 
+import lombok.Builder;
 import lombok.Data;
 
-import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 
 @Data
+@Builder
 public class CreateLoanDto {
-    @NotNull
-    private OffsetDateTime endDate;
-    @NotNull
-    private BigDecimal amount;
+    private final OffsetDateTime endDate;
+    private final BigDecimal amount;
+    private final String ipAddress;
 }

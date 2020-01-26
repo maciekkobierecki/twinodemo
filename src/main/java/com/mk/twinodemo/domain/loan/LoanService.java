@@ -1,22 +1,16 @@
 package com.mk.twinodemo.domain.loan;
 
 import com.mk.twinodemo.domain.loan.dto.CreateLoanDto;
-import com.mk.twinodemo.domain.loan.dto.LoanDto;
-import com.mk.twinodemo.domain.loan.dto.UpdateLoanDto;
-import com.mk.twinodemo.domain.loan.model.LoanProlong;
+import com.mk.twinodemo.domain.loan.model.Loan;
 
 import java.util.List;
 
 public interface LoanService {
-    List<LoanDto> findLoans();
+    List<Loan> getLoans();
 
-    LoanDto findLoan(Long id);
+    Loan getLoan(Long id);
 
-    LoanDto createLoan(CreateLoanDto dto);
+    Loan createLoan(CreateLoanDto dto);
 
-    LoanDto updateLoan(UpdateLoanDto dto);
-
-    LoanProlong prolongLoan(Long id);
-
-    void completeLoan(Long id);
+    Loan prolongLoan(Long id);
 }
